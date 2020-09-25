@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary1
 {
-    class CONNECT
+    public class CONNECT
     {
         public static DataSet ExecDataSetSP(string storeName, List<SqlParameter> pParams)
         {

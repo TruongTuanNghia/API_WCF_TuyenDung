@@ -7,5 +7,8 @@ namespace API_WCF_TuyenDung
 {
     public class ResponseModel
     {
+        public int Returncode { get; set; }
+        public string ReturnMessage { get; set; }
+        public object Data { get; set; }
     }
 }

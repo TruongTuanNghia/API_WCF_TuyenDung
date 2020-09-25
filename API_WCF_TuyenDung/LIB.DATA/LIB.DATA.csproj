@@ -43,10 +43,15 @@
   <ItemGroup>
     <Compile Include="DataAccess\DATA.cs" />
     <Compile Include="IDataAccess\IDATA.cs" />
+    <Compile Include="Model\LOGIN.cs" />
+    <Compile Include="Model\ResponseResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Model\" />
+    <ProjectReference Include="..\ClassLibrary1\LIB.CONNECT.csproj">
+      <Project>{a1da71e6-6f41-42c3-83a0-cfb137326df2}</Project>
+      <Name>LIB.CONNECT</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
