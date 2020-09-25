@@ -32,6 +32,11 @@ namespace API_WCF_TuyenDung
         [WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json,
             UriTemplate = "/InsertExperiences")]
         Stream Insert_Experiences(INSERT_EXPERIENCES_INPUT up);
+
+        [OperationContract]
+        [WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json,
+            UriTemplate = "/UpdateExperience")]
+        Stream Update_Experience(INSERT_EXPERIENCES_INPUT up);
     }   
 
 }

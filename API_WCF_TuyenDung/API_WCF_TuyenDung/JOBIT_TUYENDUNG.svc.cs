@@ -30,10 +30,17 @@ namespace API_WCF_TuyenDung
             return CONVERJS.ReturnResult(l);
         }
 
+        public Stream Update_Experience(INSERT_EXPERIENCES_INPUT up)
+        {
+            var l = Services.Update_Experience(up);
+            return CONVERJS.ReturnResult(l);
+        }
+
         public Stream Update_Login(UPDATE_LOGIN up)
         {
             var l = Services.Update_Login(up);
             return CONVERJS.ReturnResult(l);
         }
+
     }
 }

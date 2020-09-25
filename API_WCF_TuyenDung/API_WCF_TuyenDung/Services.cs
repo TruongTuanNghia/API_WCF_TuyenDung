@@ -123,5 +123,36 @@ namespace API_WCF_TuyenDung
             string js = CONVERJS.convert(rs);
             return js;
         }
+
+        public static string Update_Experience(INSERT_EXPERIENCES_INPUT up)
+        {
+            ResponseModel rs = new ResponseModel();
+            var dto = new INSERT_EXPERIENCES
+            {
+                idExperiences=up.idExperiences,
+                idUser=up.idUser,
+                titleJob=up.titleJob,
+                starDay=up.startDay,
+                endDay=up.endDay,
+                nameComoanny=up.nameCompanny,
+                statusDoingJob=up.statusDoingJob,
+                note=up.note
+            };
+            var res = IData.update_Experiences(dto);
+            if (res.ResponseCode == 1)
+            {
+                rs.Returncode = ResponseCodeEnum.Success.GetHashCode();
+                rs.ReturnMessage = "Cập nhật kinh nghiệm thành công";
+            }
+            else
+            {
+                rs.Returncode = ResponseCodeEnum.Failed.GetHashCode();
+                rs.ReturnMessage = "Cập nhật kinh nghiệm thất bại";
+            }
+            string js = CONVERJS.convert(rs);
+            return js;
+
+        }
+
     }
 }
