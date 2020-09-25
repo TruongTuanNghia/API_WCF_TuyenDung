@@ -41,5 +41,22 @@ namespace LIB.DATA.DataAccess
             return CONNECT.CONNECT.ExecuteSP<DOLOGIN>("DoLogin", lp);
         }
 
+        public ResponseResult UpdateLogin(string uname, string upass, string newupass)
+        {
+            try
+            {
+                var lp = new List<SqlParameter>
+                {
+                    new SqlParameter("@username",uname),
+                    new SqlParameter("@userPassword",upass),
+                    new SqlParameter("@newuserPassword",newupass)
+                };
+                return CONNECT.CONNECT.ExecuteSP<ResponseResult>("update_Login", lp);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

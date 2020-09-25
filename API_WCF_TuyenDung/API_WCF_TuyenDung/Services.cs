@@ -79,5 +79,23 @@ namespace API_WCF_TuyenDung
             string js = CONVERJS.convert(rs);
             return js;
         }
+        public static string Update_Login(UPDATE_LOGIN up)
+        {
+            ResponseModel rs = new ResponseModel();
+            var res = IData.UpdateLogin(up.uname, up.upass, up.newupass);
+            if (res.ResponseCode == 1)
+            {
+                rs.Returncode = ResponseCodeEnum.Success.GetHashCode();
+                rs.ReturnMessage = "Đổi mật khẩu thành công";
+            }
+            else
+            {
+                rs.Returncode = ResponseCodeEnum.Failed.GetHashCode();
+                rs.ReturnMessage = "Đổi mật khẩu thất bại";
+            }
+            string js = CONVERJS.convert(rs);
+            return js;
+
+        }
     }
 }

@@ -22,6 +22,12 @@ namespace API_WCF_TuyenDung
         [WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json,
             UriTemplate = "/DoLogin")]
         Stream DoLogin(Do_Login_Input up);
+
+        [OperationContract]
+        [WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json,
+           UriTemplate = "/UpdateLogin/")]
+        Stream Update_Login(UPDATE_LOGIN up);
+
     }   
 
 }

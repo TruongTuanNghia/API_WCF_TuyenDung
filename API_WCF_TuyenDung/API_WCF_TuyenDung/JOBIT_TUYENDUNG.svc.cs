@@ -23,6 +23,11 @@ namespace API_WCF_TuyenDung
             var isl = Services.Insert_Login(model);
             return CONVERJS.ReturnResult(isl);
         }
-       
+
+        public Stream Update_Login(UPDATE_LOGIN up)
+        {
+            var l = Services.Update_Login(up);
+            return CONVERJS.ReturnResult(l);
+        }
     }
 }

@@ -19,4 +19,11 @@ namespace API_WCF_TuyenDung
         public string upass { get; set; }
 
     }
+    public class UPDATE_LOGIN
+    {
+        public string uname { get; set; }
+        public string upass { get; set; }
+        public string newupass { get; set; }
+
+    }
 }

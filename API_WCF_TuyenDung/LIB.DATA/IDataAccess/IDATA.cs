@@ -11,5 +11,6 @@ namespace LIB.DATA.IDataAccess
     {
        ResponseResult InsertLogGin(LOGIN model);
        DOLOGIN DoLogin(string uname, string upass);
+       ResponseResult UpdateLogin(string uname, string upass, string newupass);
     }
 }
