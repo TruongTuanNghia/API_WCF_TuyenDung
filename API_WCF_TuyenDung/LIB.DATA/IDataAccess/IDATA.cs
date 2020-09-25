@@ -9,10 +9,11 @@ namespace LIB.DATA.IDataAccess
 {
     public interface IDATA
     {
-       ResponseResult InsertLogGin(LOGIN model);
-       DOLOGIN DoLogin(string uname, string upass);
-       ResponseResult UpdateLogin(string uname, string upass, string newupass);
-       ResponseResult Insert_Experiences(INSERT_EXPERIENCES model);
+        ResponseResult InsertLogGin(LOGIN model);
+        DOLOGIN DoLogin(string uname, string upass);
+        ResponseResult UpdateLogin(string uname, string upass, string newupass);
+        ResponseResult Insert_Experiences(INSERT_EXPERIENCES model);
         ResponseResult update_Experiences(INSERT_EXPERIENCES model);
+        ResponseResult delete_Experiences(int idExperiences, int idUser);
     }
 }

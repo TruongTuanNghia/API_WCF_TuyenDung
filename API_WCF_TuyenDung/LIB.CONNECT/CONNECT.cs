@@ -7,7 +7,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CONNECT
+namespace LIB.CONNECT
 {
     public class CONNECT
     {
@@ -183,7 +183,6 @@ namespace CONNECT
                 throw ex;
             }
         }
-
 
     }
 }

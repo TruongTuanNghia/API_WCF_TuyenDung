@@ -154,5 +154,22 @@ namespace API_WCF_TuyenDung
 
         }
 
+        public static string Delect_Experience(DELETE_EXPERIENCES_INPUT d)
+        {
+            ResponseModel rs = new ResponseModel();
+            var res = IData.delete_Experiences(d.idExperiences, d.idUser);
+            if (res.ResponseCode == 1)
+            {
+                rs.Returncode = ResponseCodeEnum.Success.GetHashCode();
+                rs.ReturnMessage = "Xóa thành công";
+            }
+            else
+            {
+                rs.Returncode = ResponseCodeEnum.Failed.GetHashCode();
+                rs.ReturnMessage = "Xóa thất bại";
+            }
+            string js = CONVERJS.convert(rs);
+            return js;
+        }
     }
 }

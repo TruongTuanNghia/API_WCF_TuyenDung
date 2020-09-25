@@ -48,3 +48,30 @@ begin
 	values(@idExperiences,@idUser,@nameCompanny,@startDay,@endDay,@statusDoingJob,@note)
 	select @@ROWCOUNT as ResponseCode
 end
+
+create proc updateExperiences	@idExperiences int,
+								@idUser int,
+								@title nvarchar(50),
+								@nameCompanny nvarchar(100),
+								@startDay date,
+								@endDay date,
+								@statusDoingJob bit,
+								@note nvarchar(250)
+as
+begin
+  update EXPERIENCES set NameCompanny=@nameCompanny, StartDay=@startDay,EndDay=@endDay,StatusDoingJob=@statusDoingJob,Note=@note
+  where idExperiences=@idExperiences and IdUser=@idUser
+  select @@ROWCOUNT as ResponseCode
+end
+
+create proc deleteExperiences   @idExperiences int,
+								@idUser int
+as
+begin
+	if exists(select 1 from EXPERIENCES where idExperiences=@idExperiences and IdUser=@idUser)
+	begin 
+		delete EXPERIENCES where idExperiences=@idExperiences and IdUser=@idUser
+	end
+	select @@ROWCOUNT as ResponseCode
+end
+

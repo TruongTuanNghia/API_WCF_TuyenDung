@@ -37,4 +37,10 @@ namespace API_WCF_TuyenDung
         public bool statusDoingJob { get; set; }
         public string note { get; set; }
     }
+
+    public class DELETE_EXPERIENCES_INPUT
+    {
+        public int idExperiences { get; set; }
+        public int idUser { get; set; }
+    }
 }

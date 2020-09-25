@@ -12,6 +12,12 @@ namespace API_WCF_TuyenDung
     // NOTE: In order to launch WCF Test Client for testing this service, please select JOBIT_TUYENDUNG.svc or JOBIT_TUYENDUNG.svc.cs at the Solution Explorer and start debugging.
     public class JOBIT_TUYENDUNG : IJOBIT_TUYENDUNG
     {
+        public Stream Delete_Experience(DELETE_EXPERIENCES_INPUT up)
+        {
+            var l = Services.Delect_Experience(up);
+            return CONVERJS.ReturnResult(l);
+        }
+
         public Stream DoLogin(Do_Login_Input up)
         {
             var ls = Services.DoLogin(up);
@@ -41,6 +47,7 @@ namespace API_WCF_TuyenDung
             var l = Services.Update_Login(up);
             return CONVERJS.ReturnResult(l);
         }
+        
 
     }
 }

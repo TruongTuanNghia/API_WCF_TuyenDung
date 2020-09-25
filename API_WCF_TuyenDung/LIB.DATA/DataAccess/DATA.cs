@@ -102,5 +102,23 @@ namespace LIB.DATA.DataAccess
                 throw e;
             }
         }
+
+        public ResponseResult delete_Experiences(int idExperiences, int idUser)
+        {
+            try
+            {
+                var lp = new List<SqlParameter>
+                {
+                    new SqlParameter("@idExperiences",idExperiences),
+                    new SqlParameter("@idUser",idUser)
+                    
+                };
+                return CONNECT.CONNECT.ExecuteSP<ResponseResult>("deleteExperiences", lp);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
     }
 }
