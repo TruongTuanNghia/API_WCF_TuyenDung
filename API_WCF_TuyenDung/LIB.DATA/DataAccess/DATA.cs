@@ -58,5 +58,26 @@ namespace LIB.DATA.DataAccess
                 throw ex;
             }
         }
+        public ResponseResult Insert_Experiences(INSERT_EXPERIENCES model)
+        {
+            try
+            {
+                var lp = new List<SqlParameter>
+                {
+                    new SqlParameter("@id",model.idUser),
+                    new SqlParameter("@title",model.titleJob),
+                    new SqlParameter("@nameCompanny",model.nameComoanny),
+                    new SqlParameter("@startDay",model.starDay),
+                    new SqlParameter("@endDay",model.endDay),
+                    new SqlParameter("@statusDoingJob",model.statusDoingJob),
+                    new SqlParameter("@note",model.note),
+                };
+                return CONNECT.CONNECT.ExecuteSP<ResponseResult>("inser_Experience", lp);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
     }
 }

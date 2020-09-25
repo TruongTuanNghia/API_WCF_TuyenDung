@@ -22,3 +22,28 @@ begin
 	set @res=-1	
 	select @res as ResponseCode
 end
+
+create proc UpdateLogin @username varchar(50),@userPassword nvarchar(50),@newuserPassword nvarchar(50)
+as
+begin
+	if exists( select 1 from LOGIN_APP where userName=@username and userPassword=@userPassword)
+	begin
+		update LOGIN_APP set userPassword=@newuserPassword where userName=@username			
+	end
+	select @@ROWCOUNT as ResponseCode
+end
+
+create proc InserEXPERIENCES    @idUser int,
+								@title nvarchar(50),
+								@nameCompanny nvarchar(100),
+								@startDay date,
+								@endDay date,
+								@statusDoingJob bit,
+								@note nvarchar(250)
+							
+as
+begin
+	insert into  EXPERIENCES(IdUser,NameCompanny,StartDay,EndDay, StatusDoingJob, Note)
+	values(@idUser,@nameCompanny,@startDay,@endDay,@statusDoingJob,@note)
+	select @@ROWCOUNT as ResponseCode
+end

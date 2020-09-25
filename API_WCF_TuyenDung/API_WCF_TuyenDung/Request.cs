@@ -26,4 +26,14 @@ namespace API_WCF_TuyenDung
         public string newupass { get; set; }
 
     }
+    public class INSERT_EXPERIENCES_INPUT
+    {
+        public int idUser { get; set; }
+        public string titleJob { get; set; }
+        public string nameCompanny { get; set; }
+        public string startDay { get; set; }
+        public string endDay { get; set; }
+        public bool statusDoingJob { get; set; }
+        public string note { get; set; }
+    }
 }
