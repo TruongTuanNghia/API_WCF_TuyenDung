@@ -43,4 +43,8 @@ namespace API_WCF_TuyenDung
         public int idExperiences { get; set; }
         public int idUser { get; set; }
     }
+    public class GET_EXPERIENCES_INPUT
+    {
+        public int id { get; set; }
+    }
 }

@@ -15,5 +15,6 @@ namespace LIB.DATA.IDataAccess
         ResponseResult Insert_Experiences(INSERT_EXPERIENCES model);
         ResponseResult update_Experiences(INSERT_EXPERIENCES model);
         ResponseResult delete_Experiences(int idExperiences, int idUser);
+        List<GET_EXPERIENCE> Get_List_Experiences(int id);
     }
 }

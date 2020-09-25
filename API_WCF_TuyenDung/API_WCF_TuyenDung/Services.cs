@@ -171,5 +171,31 @@ namespace API_WCF_TuyenDung
             string js = CONVERJS.convert(rs);
             return js;
         }
+        public static string Get_List_Experiences(GET_EXPERIENCES_INPUT m)
+        {
+            ResponseModel rs = new ResponseModel();
+            var dto = new GET_LIST_EXPERIENCE_OUT();
+            var res = IData.Get_List_Experiences(m.id);
+            if (res != null)
+            {
+                dto = new GET_LIST_EXPERIENCE_OUT
+                {
+                    GetListExperiences = res.Select(x => new GET_EXPERIENCE_OUT()
+                    {
+                        idExperiencs = x.idExperiences,
+                        titleJob = x.Title,
+                        nameCompanny = x.NameCompanny,
+                        startDay = x.StartDay,
+                        endDay = x.EndDay,
+                        statusDoingJob = x.StatusDoingJob,
+                        note = x.Note
+                    }).ToList(),
+                };
+                rs.Returncode = ResponseCodeEnum.Success.GetHashCode();
+                rs.Data = dto;
+            }
+            string js = CONVERJS.convert(rs);
+            return js;
+        }
     }
 }

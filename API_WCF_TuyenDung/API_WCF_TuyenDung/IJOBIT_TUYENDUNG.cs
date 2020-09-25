@@ -41,6 +41,11 @@ namespace API_WCF_TuyenDung
         [WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json,
             UriTemplate = "/DeleteExperience/")]
         Stream Delete_Experience(DELETE_EXPERIENCES_INPUT up);
+
+        [OperationContract]
+        [WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json,
+            UriTemplate = "/GetListExperiences")]
+        Stream Get_List_Experiences(GET_EXPERIENCES_INPUT up);
     }   
 
 }

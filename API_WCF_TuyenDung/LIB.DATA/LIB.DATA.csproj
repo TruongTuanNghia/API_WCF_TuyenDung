@@ -44,6 +44,7 @@
     <Compile Include="DataAccess\DATA.cs" />
     <Compile Include="IDataAccess\IDATA.cs" />
     <Compile Include="Model\DOLOGIN.cs" />
+    <Compile Include="Model\GET_EXPERIENCE.cs" />
     <Compile Include="Model\INSERT_EXPERIENCES.cs" />
     <Compile Include="Model\LOGIN.cs" />
     <Compile Include="Model\ResponseResult.cs" />

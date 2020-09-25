@@ -120,5 +120,22 @@ namespace LIB.DATA.DataAccess
                 throw e;
             }
         }
+
+        public List<GET_EXPERIENCE> Get_List_Experiences(int id)
+        {          
+            try
+            {
+                var lp = new List<SqlParameter>
+                {
+                    new SqlParameter("@idUser",id)
+                };
+                return CONNECT.CONNECT.ExecuteSPList<GET_EXPERIENCE>("GetListExperience", lp);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+
+        }
     }
 }
