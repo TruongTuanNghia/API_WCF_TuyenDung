@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="API_WCF_TuyenDung.JOBIT_TUYENDUNG" CodeBehind="JOBIT_TUYENDUNG.svc.cs" %>
