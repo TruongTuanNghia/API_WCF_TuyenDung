@@ -33,7 +33,8 @@ begin
 	select @@ROWCOUNT as ResponseCode
 end
 
-create proc InserEXPERIENCES    @idUser int,
+create proc InserEXPERIENCES    @idExperiences int,
+								@idUser int,
 								@title nvarchar(50),
 								@nameCompanny nvarchar(100),
 								@startDay date,
@@ -43,7 +44,7 @@ create proc InserEXPERIENCES    @idUser int,
 							
 as
 begin
-	insert into  EXPERIENCES(IdUser,NameCompanny,StartDay,EndDay, StatusDoingJob, Note)
-	values(@idUser,@nameCompanny,@startDay,@endDay,@statusDoingJob,@note)
+	insert into  EXPERIENCES(idExperiences,IdUser,NameCompanny,StartDay,EndDay, StatusDoingJob, Note)
+	values(@idExperiences,@idUser,@nameCompanny,@startDay,@endDay,@statusDoingJob,@note)
 	select @@ROWCOUNT as ResponseCode
 end

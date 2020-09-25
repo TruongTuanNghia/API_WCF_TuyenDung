@@ -28,6 +28,7 @@ namespace API_WCF_TuyenDung
     }
     public class INSERT_EXPERIENCES_INPUT
     {
+        public int idExperiences { get; set; }
         public int idUser { get; set; }
         public string titleJob { get; set; }
         public string nameCompanny { get; set; }

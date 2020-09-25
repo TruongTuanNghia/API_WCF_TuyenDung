@@ -64,7 +64,8 @@ namespace LIB.DATA.DataAccess
             {
                 var lp = new List<SqlParameter>
                 {
-                    new SqlParameter("@id",model.idUser),
+                    new SqlParameter("@idExperiences",model.idExperiences),
+                    new SqlParameter("@idUser",model.idUser),
                     new SqlParameter("@title",model.titleJob),
                     new SqlParameter("@nameCompanny",model.nameComoanny),
                     new SqlParameter("@startDay",model.starDay),
@@ -78,6 +79,10 @@ namespace LIB.DATA.DataAccess
             {
                 throw e;
             }
+        }
+        public ResponseResult update_Experiences(INSERT_EXPERIENCES model)
+        {
+            throw new NotImplementedException();
         }
     }
 }
