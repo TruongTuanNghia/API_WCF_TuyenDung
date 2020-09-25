@@ -99,3 +99,23 @@ begin
  values(@userName,@FullName,@Address,@School,@PhoneNumber,@Email,@Skill,@Image,@CareerGoal,@DateBirth,@Specialized,@Interests)
  	select @@ROWCOUNT as ResponseCode
 end
+
+create proc update_Candidate @userName varchar(50),
+							@FullName nvarchar(50),
+							@Address nvarchar(MAX),
+							@School nvarchar(100),
+							@PhoneNumber int,
+							@Email varchar(50),
+							@Skill varchar(100),
+							@Image nvarchar(MAX),
+							@CareerGoal nvarchar(MAX),
+							@DateBirth varchar(25),
+							@Specialized nvarchar(MAX),
+							@Interests nvarchar(250)
+as
+begin
+	update CANDIDATES set FullName=@FullName,Address=@Address,School=@School,PhoneNumber=@PhoneNumber,Email=@Email,
+	Skill=@Skill,Image=@Image,CareerGoals=@CareerGoal,DateBirth=@DateBirth,Specialized=Specialized,@Interests=Interests
+	where userName=@userName
+	select @@ROWCOUNT as ResponseCode
+end

@@ -17,5 +17,6 @@ namespace LIB.DATA.IDataAccess
         ResponseResult delete_Experiences(int idExperiences, int idUser);
         List<GET_EXPERIENCE> Get_List_Experiences(int id);
         ResponseResult insert_Candidate(INSERT_CANDIDATE model);
+        ResponseResult update_Candidate(INSERT_CANDIDATE model);
     }
 }
