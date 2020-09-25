@@ -95,7 +95,7 @@ namespace LIB.DATA.DataAccess
                     new SqlParameter("@statusDoingJob",model.statusDoingJob),
                     new SqlParameter("@note",model.note),
                 };
-                return CONNECT.CONNECT.ExecuteSP<ResponseResult>("inser_Experience", lp);
+                return CONNECT.CONNECT.ExecuteSP<ResponseResult>("updateExperiences", lp);
             }
             catch (Exception e)
             {
