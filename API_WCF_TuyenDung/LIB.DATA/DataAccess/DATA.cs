@@ -192,7 +192,7 @@ namespace LIB.DATA.DataAccess
             }
         }
 
-        public GET_CANDIDATE update_Candidate(int id)
+        public GET_CANDIDATE get_Candidate(int id)
         {
             try
             {

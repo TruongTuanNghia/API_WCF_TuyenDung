@@ -18,5 +18,6 @@ namespace LIB.DATA.IDataAccess
         List<GET_EXPERIENCE> Get_List_Experiences(int id);
         ResponseResult insert_Candidate(INSERT_CANDIDATE model);
         ResponseResult update_Candidate(INSERT_CANDIDATE model);
+        GET_CANDIDATE get_Candidate(int id);
     }
 }

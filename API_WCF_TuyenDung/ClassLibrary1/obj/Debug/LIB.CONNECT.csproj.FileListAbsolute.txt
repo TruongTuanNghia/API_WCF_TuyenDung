@@ -1,6 +1,0 @@
-D:\VS2019\Project\TuyenDung\BackEnd\API_WCF_TuyenDung\API_WCF_TuyenDung\ClassLibrary1\obj\Debug\LIB.CONNECT.csprojAssemblyReference.cache
-D:\VS2019\Project\TuyenDung\BackEnd\API_WCF_TuyenDung\API_WCF_TuyenDung\ClassLibrary1\obj\Debug\LIB.CONNECT.csproj.CoreCompileInputs.cache
-D:\VS2019\Project\TuyenDung\BackEnd\API_WCF_TuyenDung\API_WCF_TuyenDung\ClassLibrary1\bin\Debug\LIB.CONNECT.dll
-D:\VS2019\Project\TuyenDung\BackEnd\API_WCF_TuyenDung\API_WCF_TuyenDung\ClassLibrary1\bin\Debug\LIB.CONNECT.pdb
-D:\VS2019\Project\TuyenDung\BackEnd\API_WCF_TuyenDung\API_WCF_TuyenDung\ClassLibrary1\obj\Debug\LIB.CONNECT.dll
-D:\VS2019\Project\TuyenDung\BackEnd\API_WCF_TuyenDung\API_WCF_TuyenDung\ClassLibrary1\obj\Debug\LIB.CONNECT.pdb
