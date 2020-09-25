@@ -191,5 +191,21 @@ namespace LIB.DATA.DataAccess
                 throw e;
             }
         }
+
+        public GET_CANDIDATE update_Candidate(int id)
+        {
+            try
+            {
+                var lp = new List<SqlParameter>
+                {
+                    new SqlParameter("@idUser",id)
+                };
+                return CONNECT.CONNECT.ExecuteSP<GET_CANDIDATE>("getCandidate", lp);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
     }
 }

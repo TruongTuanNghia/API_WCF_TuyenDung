@@ -24,4 +24,20 @@ namespace API_WCF_TuyenDung
     {
         public List<GET_EXPERIENCE_OUT> GetListExperiences { get; set; }
     }
+    public class GET_CANDIDATE_OUT
+    {
+        public int userName { get; set; }
+        public string FullName { get; set; }
+        public string Address { get; set; }
+        public string School { get; set; }
+        public int? PhoneNumber { get; set; }
+        public string Email { get; set; }
+        public string Skill { get; set; }
+        public string Image { get; set; }
+        public string CareerGoal { get; set; }
+        public string DateBirth { get; set; }
+        public string Specialized { get; set; }
+        public string Interests { get; set; }
+        public List<GET_EXPERIENCE_OUT> listExperiences { get; set; }
+    }
 }

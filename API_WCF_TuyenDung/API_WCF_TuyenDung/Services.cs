@@ -257,5 +257,48 @@ namespace API_WCF_TuyenDung
             string js = CONVERJS.convert(rs);
             return js;
         }
+
+        public static string get_Candidate(GET_CANDIDATE_INPUT d)
+        {
+            ResponseModel rs = new ResponseModel();
+            var dto = new GET_CANDIDATE_OUT();
+            var res = IData.get_Candidate(d.id);
+
+            if (res!=null)
+            {
+                dto = new GET_CANDIDATE_OUT
+                {
+                    userName = res.userName,
+                    FullName = res.FullName,
+                    Address = res.Address,
+                    School = res.School,
+                    PhoneNumber = res.PhoneNumber,
+                    Email = res.Email,
+                    Skill = res.Skill,
+                    Specialized = res.Specialized,
+                    CareerGoal = res.CareerGoal,
+                    DateBirth = res.DateBirth,
+                    listExperiences = res.Experiences.Select(x => new GET_EXPERIENCE_OUT()
+                    {
+                        idExperiencs = x.idExperiences,
+                        titleJob=x.Title,
+                        nameCompanny=x.NameCompanny,
+                        startDay=x.StartDay,
+                        endDay = x.EndDay,
+                        statusDoingJob=x.StatusDoingJob,
+                        note=x.Note
+                    }).ToList()
+
+                };
+                rs.Returncode = ResponseCodeEnum.Success.GetHashCode();
+                rs.Data = dto;
+            }
+            else
+            {
+                rs.Returncode = ResponseCodeEnum.Failed.GetHashCode();               
+            }
+            string js = CONVERJS.convert(rs);
+            return js;
+        }
     }
 }

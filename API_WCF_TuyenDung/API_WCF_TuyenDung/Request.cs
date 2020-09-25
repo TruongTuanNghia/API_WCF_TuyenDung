@@ -63,4 +63,8 @@ namespace API_WCF_TuyenDung
         public string Specialized { get; set; }
         public string Interests { get; set; }
     }
+    public class GET_CANDIDATE_INPUT
+    {
+        public int id { get; set; }
+    }
 }
