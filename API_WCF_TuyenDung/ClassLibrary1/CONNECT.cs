@@ -7,7 +7,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClassLibrary1
+namespace LIB.CONNECT
 {
     public class CONNECT
     {

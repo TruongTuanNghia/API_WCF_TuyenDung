@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
+using System.ServiceModel.Web;
 using System.Text;
 
 namespace API_WCF_TuyenDung
@@ -12,6 +14,8 @@ namespace API_WCF_TuyenDung
     public interface IJOBIT_TUYENDUNG
     {
         [OperationContract]
-        void DoWork();
+        [WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json,
+              UriTemplate = "/insertLogin")]
+        Stream InsertLogGin(LOGIN_INPUT model);
     }
 }
