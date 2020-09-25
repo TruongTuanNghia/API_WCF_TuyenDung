@@ -10,5 +10,6 @@ namespace LIB.DATA.IDataAccess
     public interface IDATA
     {
        ResponseResult InsertLogGin(LOGIN model);
+       DOLOGIN DoLogin(string uname, string upass);
     }
 }

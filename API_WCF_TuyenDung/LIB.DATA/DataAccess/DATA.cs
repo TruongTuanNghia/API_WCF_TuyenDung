@@ -12,6 +12,7 @@ namespace LIB.DATA.DataAccess
 {
     public class DATA : IDATA
     {
+        
         public ResponseResult InsertLogGin(LOGIN model)
         {
             try
@@ -30,5 +31,15 @@ namespace LIB.DATA.DataAccess
                 throw e;
             }
         }
+        public DOLOGIN DoLogin(string username, string password)
+        {
+            var lp = new List<SqlParameter>
+                {
+                    new SqlParameter("@username",username),
+                    new SqlParameter("@pas",password),                  
+                };
+            return CONNECT.CONNECT.ExecuteSP<DOLOGIN>("DoLogin", lp);
+        }
+
     }
 }

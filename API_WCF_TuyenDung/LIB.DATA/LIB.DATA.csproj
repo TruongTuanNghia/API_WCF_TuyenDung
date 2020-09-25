@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="DataAccess\DATA.cs" />
     <Compile Include="IDataAccess\IDATA.cs" />
+    <Compile Include="Model\DOLOGIN.cs" />
     <Compile Include="Model\LOGIN.cs" />
     <Compile Include="Model\ResponseResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

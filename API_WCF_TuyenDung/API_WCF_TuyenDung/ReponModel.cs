@@ -5,7 +5,10 @@ using System.Web;
 
 namespace API_WCF_TuyenDung
 {
-    public class ReponModel
+    public class DoLogin_Out
     {
+        public int id { get; set; }
+        public int stype { get; set; }
     }
+
 }

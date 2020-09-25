@@ -13,5 +13,10 @@ namespace API_WCF_TuyenDung
             public int? statusLG { get; set; }
             public int typeLogin { get; set; }
          }
-    
+    public class Do_Login_Input
+    {
+        public string uname { get; set; }
+        public string upass { get; set; }
+
+    }
 }

@@ -57,5 +57,27 @@ namespace API_WCF_TuyenDung
             string js = CONVERJS.convert(rs);
             return js;
         }
+        public static string DoLogin(Do_Login_Input d)
+        {
+            ResponseModel rs = new ResponseModel();
+            var res = IData.DoLogin(d.uname, d.upass);
+            if (res.ResponseCode != -1)
+            {
+                var dto = new DoLogin_Out()
+                {
+                    id = res.id,
+                    stype = res.statusLG,
+                };
+                rs.Returncode = ResponseCodeEnum.Success.GetHashCode();
+                rs.Data = dto;
+            }
+            else
+            {
+                rs.Returncode = ResponseCodeEnum.Failed.GetHashCode();
+                rs.ReturnMessage = "Đăng nhập thất bại";
+            }
+            string js = CONVERJS.convert(rs);
+            return js;
+        }
     }
 }

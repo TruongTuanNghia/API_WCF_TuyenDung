@@ -3,3 +3,4 @@ D:\VS2019\Project\TuyenDung\BackEnd\API_WCF_TuyenDung\API_WCF_TuyenDung\ClassLib
 D:\VS2019\Project\TuyenDung\BackEnd\API_WCF_TuyenDung\API_WCF_TuyenDung\ClassLibrary1\obj\Debug\LIB.CONNECT.csproj.CoreCompileInputs.cache
 D:\VS2019\Project\TuyenDung\BackEnd\API_WCF_TuyenDung\API_WCF_TuyenDung\ClassLibrary1\obj\Debug\ClassLibrary1.dll
 D:\VS2019\Project\TuyenDung\BackEnd\API_WCF_TuyenDung\API_WCF_TuyenDung\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
+D:\VS2019\Project\TuyenDung\BackEnd\API_WCF_TuyenDung\API_WCF_TuyenDung\ClassLibrary1\obj\Debug\LIB.CONNECT.csprojAssemblyReference.cache
