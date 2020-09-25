@@ -36,11 +36,11 @@ D:\VS2019\Project\TuyenDung\BackEnd\API_WCF_TuyenDung\API_WCF_TuyenDung\API_WCF_
 D:\VS2019\Project\TuyenDung\BackEnd\API_WCF_TuyenDung\API_WCF_TuyenDung\API_WCF_TuyenDung\bin\LIB.DATA.dll
 D:\VS2019\Project\TuyenDung\BackEnd\API_WCF_TuyenDung\API_WCF_TuyenDung\API_WCF_TuyenDung\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 D:\VS2019\Project\TuyenDung\BackEnd\API_WCF_TuyenDung\API_WCF_TuyenDung\API_WCF_TuyenDung\bin\Newtonsoft.Json.dll
-D:\VS2019\Project\TuyenDung\BackEnd\API_WCF_TuyenDung\API_WCF_TuyenDung\API_WCF_TuyenDung\bin\ClassLibrary1.dll
 D:\VS2019\Project\TuyenDung\BackEnd\API_WCF_TuyenDung\API_WCF_TuyenDung\API_WCF_TuyenDung\bin\LIB.DATA.pdb
 D:\VS2019\Project\TuyenDung\BackEnd\API_WCF_TuyenDung\API_WCF_TuyenDung\API_WCF_TuyenDung\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 D:\VS2019\Project\TuyenDung\BackEnd\API_WCF_TuyenDung\API_WCF_TuyenDung\API_WCF_TuyenDung\bin\Newtonsoft.Json.xml
-D:\VS2019\Project\TuyenDung\BackEnd\API_WCF_TuyenDung\API_WCF_TuyenDung\API_WCF_TuyenDung\bin\ClassLibrary1.pdb
 D:\VS2019\Project\TuyenDung\BackEnd\API_WCF_TuyenDung\API_WCF_TuyenDung\API_WCF_TuyenDung\obj\Debug\API_WCF_TuyenDung.csproj.CopyComplete
 D:\VS2019\Project\TuyenDung\BackEnd\API_WCF_TuyenDung\API_WCF_TuyenDung\API_WCF_TuyenDung\obj\Debug\API_WCF_TuyenDung.dll
 D:\VS2019\Project\TuyenDung\BackEnd\API_WCF_TuyenDung\API_WCF_TuyenDung\API_WCF_TuyenDung\obj\Debug\API_WCF_TuyenDung.pdb
+D:\VS2019\Project\TuyenDung\BackEnd\API_WCF_TuyenDung\API_WCF_TuyenDung\API_WCF_TuyenDung\bin\LIB.CONNECT.dll
+D:\VS2019\Project\TuyenDung\BackEnd\API_WCF_TuyenDung\API_WCF_TuyenDung\API_WCF_TuyenDung\bin\LIB.CONNECT.pdb

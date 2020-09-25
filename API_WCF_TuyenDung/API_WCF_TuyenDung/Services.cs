@@ -197,5 +197,35 @@ namespace API_WCF_TuyenDung
             string js = CONVERJS.convert(rs);
             return js;
         }
+        public static string Insert_Candidate(INSERT_CANDIDATE_INPUT d)
+        {
+            ResponseModel rs = new ResponseModel();
+            var dto = new INSERT_CANDIDATE
+            {
+                userName = d.userName,
+                FullName = d.FullName,
+                Address = d.Address,
+                School = d.School,
+                PhoneNumber = d.PhoneNumber,
+                Email = d.Email,
+                Skill = d.Skill,
+                Specialized = d.Specialized,
+                CareerGoal = d.CareerGoal,
+                DateBirth = d.DateBirth              
+            };
+            var res = IData.insert_Candidate(dto);
+            if (res.ResponseCode == 1)
+            {
+                rs.Returncode = ResponseCodeEnum.Success.GetHashCode();
+                rs.ReturnMessage = "Thêm thông tin  thành công";
+            }
+            else
+            {
+                rs.Returncode = ResponseCodeEnum.Failed.GetHashCode();
+                rs.ReturnMessage = "Thêm thông tin thất bại";
+            }
+            string js = CONVERJS.convert(rs);
+            return js;
+        }
     }
 }

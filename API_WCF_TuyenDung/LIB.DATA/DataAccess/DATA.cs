@@ -137,5 +137,32 @@ namespace LIB.DATA.DataAccess
             }
 
         }
+
+        public ResponseResult insert_Candidate(INSERT_CANDIDATE model)
+        {
+            try
+            {
+                var lp = new List<SqlParameter>
+                {
+                    new SqlParameter("@userName",model.userName),
+                    new SqlParameter("@FullName",model.FullName),
+                    new SqlParameter("@Address",model.Address),
+                    new SqlParameter("@School",model.School),
+                    new SqlParameter("@PhoneNumber",model.PhoneNumber),
+                    new SqlParameter("@Email",model.Email),
+                    new SqlParameter("@Skill",model.Skill),
+                    new SqlParameter("@Image",model.Image),
+                    new SqlParameter("@CareerGoal",model.CareerGoal),
+                    new SqlParameter("@DateBirth",model.DateBirth),
+                    new SqlParameter("@Specialized",model.Specialized),
+                    new SqlParameter("@Interests",model.Interests),
+                };
+                return CONNECT.CONNECT.ExecuteSP<ResponseResult>("insert_Candidate", lp);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
     }
 }

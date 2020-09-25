@@ -44,8 +44,8 @@ create proc InserEXPERIENCES    @idExperiences int,
 							
 as
 begin
-	insert into  EXPERIENCES(idExperiences,IdUser,NameCompanny,StartDay,EndDay, StatusDoingJob, Note)
-	values(@idExperiences,@idUser,@nameCompanny,@startDay,@endDay,@statusDoingJob,@note)
+	insert into  EXPERIENCES(idExperiences,IdUser,Title,NameCompanny,StartDay,EndDay, StatusDoingJob, Note)
+	values(@idExperiences,@idUser,@title,@nameCompanny,@startDay,@endDay,@statusDoingJob,@note)
 	select @@ROWCOUNT as ResponseCode
 end
 
@@ -59,7 +59,7 @@ create proc updateExperiences	@idExperiences int,
 								@note nvarchar(250)
 as
 begin
-  update EXPERIENCES set NameCompanny=@nameCompanny, StartDay=@startDay,EndDay=@endDay,StatusDoingJob=@statusDoingJob,Note=@note
+  update EXPERIENCES set Title=@title, NameCompanny=@nameCompanny, StartDay=@startDay,EndDay=@endDay,StatusDoingJob=@statusDoingJob,Note=@note
   where idExperiences=@idExperiences and IdUser=@idUser
   select @@ROWCOUNT as ResponseCode
 end
@@ -75,3 +75,27 @@ begin
 	select @@ROWCOUNT as ResponseCode
 end
 
+create proc GetListExperience @idUser int
+as
+begin
+ select * from EXPERIENCES where IdUser=@idUser
+end
+
+create proc insert_Candidate @userName varchar(50),
+							@FullName nvarchar(50),
+							@Address nvarchar(MAX),
+							@School nvarchar(100),
+							@PhoneNumber int,
+							@Email varchar(50),
+							@Skill varchar(100),
+							@Image nvarchar(MAX),
+							@CareerGoal nvarchar(MAX),
+							@DateBirth varchar(25),
+							@Specialized nvarchar(MAX),
+							@Interests nvarchar(250)
+as
+begin
+ insert into CANDIDATES(userName,FullName,Address,School,PhoneNumber,Email,Skill,Image,CareerGoals,DateBirth,Specialized,Interests)
+ values(@userName,@FullName,@Address,@School,@PhoneNumber,@Email,@Skill,@Image,@CareerGoal,@DateBirth,@Specialized,@Interests)
+ 	select @@ROWCOUNT as ResponseCode
+end
