@@ -1,0 +1,9 @@
+D:\VS2019\Project\TuyenDung\BackEnd\API_WCF_TuyenDung\API_WCF_TuyenDung\LIB.DATA\bin\Debug\LIB.DATA.dll
+D:\VS2019\Project\TuyenDung\BackEnd\API_WCF_TuyenDung\API_WCF_TuyenDung\LIB.DATA\bin\Debug\LIB.DATA.pdb
+D:\VS2019\Project\TuyenDung\BackEnd\API_WCF_TuyenDung\API_WCF_TuyenDung\LIB.DATA\bin\Debug\LIB.CONNECT.dll
+D:\VS2019\Project\TuyenDung\BackEnd\API_WCF_TuyenDung\API_WCF_TuyenDung\LIB.DATA\bin\Debug\LIB.CONNECT.pdb
+D:\VS2019\Project\TuyenDung\BackEnd\API_WCF_TuyenDung\API_WCF_TuyenDung\LIB.DATA\obj\Debug\LIB.DATA.csprojAssemblyReference.cache
+D:\VS2019\Project\TuyenDung\BackEnd\API_WCF_TuyenDung\API_WCF_TuyenDung\LIB.DATA\obj\Debug\LIB.DATA.csproj.CoreCompileInputs.cache
+D:\VS2019\Project\TuyenDung\BackEnd\API_WCF_TuyenDung\API_WCF_TuyenDung\LIB.DATA\obj\Debug\LIB.DATA.csproj.CopyComplete
+D:\VS2019\Project\TuyenDung\BackEnd\API_WCF_TuyenDung\API_WCF_TuyenDung\LIB.DATA\obj\Debug\LIB.DATA.dll
+D:\VS2019\Project\TuyenDung\BackEnd\API_WCF_TuyenDung\API_WCF_TuyenDung\LIB.DATA\obj\Debug\LIB.DATA.pdb
