@@ -305,6 +305,25 @@ namespace LIB.DATA.DataAccess
 
                 };
                 return CONNECT.CONNECT.ExecuteSP<ResponseResult>("updateJob", lp);
+<<<<<<< HEAD
+=======
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        public List<UPDATE_JOB> get_All_Jobs(int id)
+        {
+            try
+            {
+                var lp = new List<SqlParameter>
+                {
+                    new SqlParameter("@idUser",id)
+                };
+                return CONNECT.CONNECT.ExecuteSPList<UPDATE_JOB>("getAllJob", lp);
+>>>>>>> TuanNghia
             }
             catch (Exception e)
             {

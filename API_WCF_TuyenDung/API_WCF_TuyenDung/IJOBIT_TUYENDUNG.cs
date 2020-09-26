@@ -86,6 +86,11 @@ namespace API_WCF_TuyenDung
         [WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json,
           UriTemplate = "/updateJod")]
         Stream updateJob(UPDATE_JOB_INPUT model);
+
+        [OperationContract]
+        [WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json,
+          UriTemplate = "/getAllJod")]
+        Stream GetAllJob(GET_ALL_JOB_INPUT model);
     }   
 
 }
