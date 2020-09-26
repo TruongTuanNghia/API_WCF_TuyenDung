@@ -304,7 +304,23 @@ namespace LIB.DATA.DataAccess
                     new SqlParameter("@deadline",model.Deadline),
 
                 };
-                return CONNECT.CONNECT.ExecuteSP<ResponseResult>("insertJob", lp);
+                return CONNECT.CONNECT.ExecuteSP<ResponseResult>("updateJob", lp);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        public List<UPDATE_JOB> get_All_Jobs(int id)
+        {
+            try
+            {
+                var lp = new List<SqlParameter>
+                {
+                    new SqlParameter("@idUser",id)
+                };
+                return CONNECT.CONNECT.ExecuteSPList<UPDATE_JOB>("getAllJob", lp);
             }
             catch (Exception e)
             {

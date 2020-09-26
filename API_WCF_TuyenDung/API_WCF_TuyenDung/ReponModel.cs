@@ -40,4 +40,19 @@ namespace API_WCF_TuyenDung
         public string Interests { get; set; }
         public List<GET_EXPERIENCE_OUT> listExperiences { get; set; }
     }
+    public class GET_ALL_JOB_OUT
+    {
+        public int IdJob { get; set; }
+        public int IdCompany { get; set; }
+        public string TitleJob { get; set; }
+        public string JobDescription { get; set; }
+        public string Request { get; set; }
+        public string Benefits { get; set; }
+        public string Deadline { get; set; }
+    }
+    public class GET_LIST_JOB_OUT
+    {
+        public List<GET_ALL_JOB_OUT> getalljobs { get; set; }
+    }
+
 }

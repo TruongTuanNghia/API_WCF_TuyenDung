@@ -100,4 +100,8 @@ namespace API_WCF_TuyenDung
         public string Benefits { get; set; }
         public string Deadline { get; set; }
     }
+    public class GET_ALL_JOB_INPUT
+    {
+        public int id { get; set; }
+    }
 }

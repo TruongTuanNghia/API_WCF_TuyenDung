@@ -30,6 +30,12 @@ namespace API_WCF_TuyenDung
             return CONVERJS.ReturnResult(ls);
         }
 
+        public Stream GetAllJob(GET_ALL_JOB_INPUT model)
+        {
+            var ls = Services.get_All_Job(model);
+            return CONVERJS.ReturnResult(ls);
+        }
+
         public Stream getCandidate(GET_CANDIDATE_INPUT model)
         {
             var ls = Services.get_Candidate(model);

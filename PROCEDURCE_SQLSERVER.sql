@@ -223,3 +223,9 @@ begin
 	where IdCompany=@idcompany and IdJob =@idjob
 	select @@ROWCOUNT as ResponseCode
 end
+
+create proc getAllJob @idcompany int
+as
+begin
+ select * from JOBS where IdCompany=11
+end

@@ -24,5 +24,6 @@ namespace LIB.DATA.IDataAccess
         ResponseResult update_Company(INSERT_COMPANY model);
         ResponseResult insert_Job(INSERT_JOB model);
         ResponseResult update_Job(UPDATE_JOB model);
+        List<UPDATE_JOB> get_All_Jobs(int id);
     }
 }

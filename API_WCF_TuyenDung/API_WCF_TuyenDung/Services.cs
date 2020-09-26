@@ -425,5 +425,35 @@ namespace API_WCF_TuyenDung
             string js = CONVERJS.convert(rs);
             return js;
         }
+        public static string get_All_Job(GET_ALL_JOB_INPUT d)
+        {
+            ResponseModel rs = new ResponseModel();
+            var dto = new GET_LIST_JOB_OUT();
+            var res = IData.get_All_Jobs(d.id);
+            if (res!= null)
+            {
+                dto = new GET_LIST_JOB_OUT
+                {
+                    getalljobs = res.Select(x => new GET_ALL_JOB_OUT()
+                    {
+                        IdJob = x.IdJob,
+                        IdCompany = x.IdCompany,
+                        TitleJob = x.TitleJob,
+                        JobDescription = x.JobDescription,
+                        Request = x.Request,
+                        Benefits = x.Benefits,
+                        Deadline = x.Deadline                       
+                    }).ToList()                               
+                };
+                rs.Returncode = ResponseCodeEnum.Success.GetHashCode();
+                rs.Data = dto;
+            }
+            else
+            {
+                rs.Returncode = ResponseCodeEnum.Failed.GetHashCode();              
+            }
+            string js = CONVERJS.convert(rs);
+            return js;
+        }
     }
 }
