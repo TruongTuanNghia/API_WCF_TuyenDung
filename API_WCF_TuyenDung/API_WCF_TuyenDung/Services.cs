@@ -317,5 +317,32 @@ namespace API_WCF_TuyenDung
             string js = CONVERJS.convert(rs);
             return js;
         }
+        public static string Insert_Company(INSERT_COMPANY_INPUT d)
+        {
+            ResponseModel rs = new ResponseModel();
+            var dto = new INSERT_COMPANY
+            {
+                IdCompany = d.IdCompany,
+                FullName = d.FullName,
+                Address = d.Address,              
+                PhoneNumber = d.PhoneNumber,
+                Email = d.Email,
+                Node = d.Node,
+                Image=d.Image
+            };
+            var res = IData.insert_Company(dto);
+            if (res.ResponseCode == 1)
+            {
+                rs.Returncode = ResponseCodeEnum.Success.GetHashCode();
+                rs.ReturnMessage = "Thêm công tuy  thành công";
+            }
+            else
+            {
+                rs.Returncode = ResponseCodeEnum.Failed.GetHashCode();
+                rs.ReturnMessage = "Thêm công tuy thất bại";
+            }
+            string js = CONVERJS.convert(rs);
+            return js;
+        }
     }
 }

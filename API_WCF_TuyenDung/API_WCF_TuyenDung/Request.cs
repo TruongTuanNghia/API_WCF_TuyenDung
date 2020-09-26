@@ -71,4 +71,14 @@ namespace API_WCF_TuyenDung
     {
         public int id { get; set; }
     }
+    public class INSERT_COMPANY_INPUT
+    {
+        public int IdCompany { get; set; }
+        public string FullName { get; set; }
+        public string Address { get; set; }
+        public int? PhoneNumber { get; set; }
+        public string Email { get; set; }
+        public string Image { get; set; }
+        public string Node { get; set; }
+    }
 }

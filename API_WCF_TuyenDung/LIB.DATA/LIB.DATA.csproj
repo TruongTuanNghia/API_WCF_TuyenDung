@@ -47,6 +47,7 @@
     <Compile Include="Model\GET_CANDIDATE.cs" />
     <Compile Include="Model\GET_EXPERIENCE.cs" />
     <Compile Include="Model\INSERT_CANDIDATE.cs" />
+    <Compile Include="Model\INSERT_COMPANY.cs" />
     <Compile Include="Model\INSERT_EXPERIENCES.cs" />
     <Compile Include="Model\LOGIN.cs" />
     <Compile Include="Model\ResponseResult.cs" />

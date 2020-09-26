@@ -164,3 +164,20 @@ begin try
 			end catch
 	select @ketQua as ResponseCode
 end
+
+create proc insertCompany  @fullname nvarchar(200), 
+							@idcompany int,
+							@address nvarchar(100),
+							@email nvarchar(50),
+							@phonenumber int,
+							@node nvarchar(max),
+							@image varchar(100)
+as
+begin
+ if not exists(select 1 from COMPANYS where IdCompany=@idcompany)
+ begin
+	insert into COMPANYS(IdCompany,FullName,Address,Email,PhoneNumber,Node,image)
+	values(@idcompany,@fullname,@address,@email,@phonenumber,@node,@idcompany)
+ end
+ select @@ROWCOUNT as ResponseCode
+end  

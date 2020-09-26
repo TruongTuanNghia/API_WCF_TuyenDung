@@ -223,5 +223,27 @@ namespace LIB.DATA.DataAccess
                 throw e;
             }
         }
+
+        public ResponseResult insert_Company(INSERT_COMPANY model)
+        {
+            try
+            {
+                var lp = new List<SqlParameter>
+                {
+                    new SqlParameter("@idcompany",model.IdCompany),
+                    new SqlParameter("@fullName",model.FullName),
+                    new SqlParameter("@address",model.Address),                  
+                    new SqlParameter("@phoneNumber",model.PhoneNumber),
+                    new SqlParameter("@email",model.Email),                   
+                    new SqlParameter("@image",model.Image),
+                    new SqlParameter("@careerGoal",model.Node),                   
+                };
+                return CONNECT.CONNECT.ExecuteSP<ResponseResult>("insertCompany", lp);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
     }
 }

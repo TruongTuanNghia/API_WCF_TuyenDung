@@ -66,6 +66,11 @@ namespace API_WCF_TuyenDung
         [WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json,
              UriTemplate = "/deleteLogin")]
         Stream DeleteLogin(GET_LOGIN_INPUT model);
+
+        [OperationContract]
+        [WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json,
+            UriTemplate = "/insertCompany")]
+        Stream insertCompany(INSERT_COMPANY_INPUT model);
     }   
 
 }
