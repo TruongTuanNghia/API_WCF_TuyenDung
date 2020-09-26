@@ -35,7 +35,6 @@ D:\VS2019\Project\TuyenDung\BackEnd\API_WCF_TuyenDung\API_WCF_TuyenDung\API_WCF_
 D:\VS2019\Project\TuyenDung\BackEnd\API_WCF_TuyenDung\API_WCF_TuyenDung\API_WCF_TuyenDung\bin\roslyn\VBCSCompiler.exe.config
 D:\VS2019\Project\TuyenDung\BackEnd\API_WCF_TuyenDung\API_WCF_TuyenDung\API_WCF_TuyenDung\bin\LIB.DATA.dll
 D:\VS2019\Project\TuyenDung\BackEnd\API_WCF_TuyenDung\API_WCF_TuyenDung\API_WCF_TuyenDung\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-D:\VS2019\Project\TuyenDung\BackEnd\API_WCF_TuyenDung\API_WCF_TuyenDung\API_WCF_TuyenDung\bin\Newtonsoft.Json.dll
 D:\VS2019\Project\TuyenDung\BackEnd\API_WCF_TuyenDung\API_WCF_TuyenDung\API_WCF_TuyenDung\bin\LIB.CONNECT.dll
 D:\VS2019\Project\TuyenDung\BackEnd\API_WCF_TuyenDung\API_WCF_TuyenDung\API_WCF_TuyenDung\bin\LIB.DATA.pdb
 D:\VS2019\Project\TuyenDung\BackEnd\API_WCF_TuyenDung\API_WCF_TuyenDung\API_WCF_TuyenDung\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml

@@ -207,5 +207,21 @@ namespace LIB.DATA.DataAccess
                 throw e;
             }
         }
+
+        public ResponseResult delete_Login(int id)
+        {
+            try
+            {
+                var lp = new List<SqlParameter>
+                {
+                    new SqlParameter("@idUser",id)
+                };
+                return CONNECT.CONNECT.ExecuteSP<ResponseResult>("deleteLogin", lp);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
     }
 }

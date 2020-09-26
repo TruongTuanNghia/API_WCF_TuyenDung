@@ -67,4 +67,8 @@ namespace API_WCF_TuyenDung
     {
         public int id { get; set; }
     }
+    public class GET_LOGIN_INPUT
+    {
+        public int id { get; set; }
+    }
 }

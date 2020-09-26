@@ -19,5 +19,6 @@ namespace LIB.DATA.IDataAccess
         ResponseResult insert_Candidate(INSERT_CANDIDATE model);
         ResponseResult update_Candidate(INSERT_CANDIDATE model);
         GET_CANDIDATE get_Candidate(int id);
+        ResponseResult delete_Login(int id);
     }
 }
