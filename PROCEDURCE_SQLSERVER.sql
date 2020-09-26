@@ -181,3 +181,17 @@ begin
  end
  select @@ROWCOUNT as ResponseCode
 end  
+
+create proc updateCompany @fullname nvarchar(200), 
+							@idcompany int,
+							@address nvarchar(100),
+							@email nvarchar(50),
+							@phonenumber int,
+							@node nvarchar(max),
+							@image varchar(100)
+as
+begin
+	update COMPANYS set FullName=@fullname,Address=@address,Email=@email,PhoneNumber=@phonenumber,
+	Node=@node,image=@idcompany where IdCompany=@idcompany
+	select @@ROWCOUNT as ResponseCode
+end

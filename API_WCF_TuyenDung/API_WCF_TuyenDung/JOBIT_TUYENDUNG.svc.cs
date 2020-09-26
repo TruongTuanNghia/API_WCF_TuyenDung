@@ -72,6 +72,12 @@ namespace API_WCF_TuyenDung
             return CONVERJS.ReturnResult(l);
         }
 
+        public Stream updateCompany(INSERT_COMPANY_INPUT model)
+        {
+            var l = Services.Update_Company(model);
+            return CONVERJS.ReturnResult(l);
+        }
+
         public Stream Update_Experience(INSERT_EXPERIENCES_INPUT up)
         {
             var l = Services.Update_Experience(up);

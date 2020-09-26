@@ -334,12 +334,39 @@ namespace API_WCF_TuyenDung
             if (res.ResponseCode == 1)
             {
                 rs.Returncode = ResponseCodeEnum.Success.GetHashCode();
-                rs.ReturnMessage = "Thêm công tuy  thành công";
+                rs.ReturnMessage = "Thêm nhà tuyển dụng  thành công";
             }
             else
             {
                 rs.Returncode = ResponseCodeEnum.Failed.GetHashCode();
-                rs.ReturnMessage = "Thêm công tuy thất bại";
+                rs.ReturnMessage = "Thêm nhà tuyển dụng thất bại";
+            }
+            string js = CONVERJS.convert(rs);
+            return js;
+        }
+        public static string Update_Company(INSERT_COMPANY_INPUT d)
+        {
+            ResponseModel rs = new ResponseModel();
+            var dto = new INSERT_COMPANY
+            {
+                IdCompany = d.IdCompany,
+                FullName = d.FullName,
+                Address = d.Address,
+                PhoneNumber = d.PhoneNumber,
+                Email = d.Email,
+                Node = d.Node,
+                Image = d.Image
+            };
+            var res = IData.update_Company(dto);
+            if (res.ResponseCode == 1)
+            {
+                rs.Returncode = ResponseCodeEnum.Success.GetHashCode();
+                rs.ReturnMessage = "Cập nhật nhà tuyển dụng thành công";
+            }
+            else
+            {
+                rs.Returncode = ResponseCodeEnum.Failed.GetHashCode();
+                rs.ReturnMessage = "Cập nhật nhà tuyển dụng thất bại";
             }
             string js = CONVERJS.convert(rs);
             return js;
