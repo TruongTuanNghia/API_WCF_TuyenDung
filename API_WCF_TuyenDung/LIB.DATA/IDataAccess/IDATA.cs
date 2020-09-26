@@ -23,5 +23,6 @@ namespace LIB.DATA.IDataAccess
         ResponseResult insert_Company(INSERT_COMPANY model);
         ResponseResult update_Company(INSERT_COMPANY model);
         ResponseResult insert_Job(INSERT_JOB model);
+        ResponseResult update_Job(UPDATE_JOB model);
     }
 }

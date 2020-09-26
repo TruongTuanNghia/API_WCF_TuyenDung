@@ -52,6 +52,7 @@
     <Compile Include="Model\INSERT_JOB.cs" />
     <Compile Include="Model\LOGIN.cs" />
     <Compile Include="Model\ResponseResult.cs" />
+    <Compile Include="Model\UPDATE_JOB.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

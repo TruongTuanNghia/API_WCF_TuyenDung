@@ -208,3 +208,18 @@ begin
 	values(@idcompany,@titlejob,@jobdescription,@request,@benefits,@deadline)
 	select @@ROWCOUNT as ResponseCode
 end
+
+create proc updateJob @idcompany int,
+						@idjob int,
+						@titlejob nvarchar(100),
+						@jobdescription nvarchar(max),
+						@request nvarchar(max),
+						@benefits nvarchar(max),
+						@deadline varchar(25)
+as 
+begin
+	update JOBS set TitleJob=@titlejob, JobDescription=@jobdescription,
+	Request=@request,Benefits= @benefits,Deadline=@deadline 
+	where IdCompany=@idcompany and IdJob =@idjob
+	select @@ROWCOUNT as ResponseCode
+end

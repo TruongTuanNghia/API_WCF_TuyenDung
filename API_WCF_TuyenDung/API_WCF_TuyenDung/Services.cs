@@ -398,5 +398,32 @@ namespace API_WCF_TuyenDung
             string js = CONVERJS.convert(rs);
             return js;
         }
+        public static string Update_Job(UPDATE_JOB_INPUT d)
+        {
+            ResponseModel rs = new ResponseModel();
+            var dto = new UPDATE_JOB
+            {
+                IdJob=d.IdJob,
+                IdCompany = d.IdCompany,
+                TitleJob = d.TitleJob,
+                JobDescription = d.JobDescription,
+                Request = d.Request,
+                Benefits = d.Benefits,
+                Deadline = d.Deadline
+            };
+            var res = IData.update_Job(dto);
+            if (res.ResponseCode == 1)
+            {
+                rs.Returncode = ResponseCodeEnum.Success.GetHashCode();
+                rs.ReturnMessage = "Cập nhật thành công";
+            }
+            else
+            {
+                rs.Returncode = ResponseCodeEnum.Failed.GetHashCode();
+                rs.ReturnMessage = "Cập nhật thất bại";
+            }
+            string js = CONVERJS.convert(rs);
+            return js;
+        }
     }
 }

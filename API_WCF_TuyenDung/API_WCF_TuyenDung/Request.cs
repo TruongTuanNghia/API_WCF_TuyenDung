@@ -90,4 +90,14 @@ namespace API_WCF_TuyenDung
         public string Benefits { get; set; }
         public string Deadline { get; set; }
     }
+    public class UPDATE_JOB_INPUT
+    {
+        public int IdJob { get; set; }
+        public int IdCompany { get; set; }
+        public string TitleJob { get; set; }
+        public string JobDescription { get; set; }
+        public string Request { get; set; }
+        public string Benefits { get; set; }
+        public string Deadline { get; set; }
+    }
 }

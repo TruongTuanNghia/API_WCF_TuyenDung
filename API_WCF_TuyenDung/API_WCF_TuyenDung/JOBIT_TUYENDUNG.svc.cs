@@ -84,6 +84,12 @@ namespace API_WCF_TuyenDung
             return CONVERJS.ReturnResult(l);
         }
 
+        public Stream updateJob(UPDATE_JOB_INPUT model)
+        {
+            var l = Services.Update_Job(model);
+            return CONVERJS.ReturnResult(l);
+        }
+
         public Stream Update_Experience(INSERT_EXPERIENCES_INPUT up)
         {
             var l = Services.Update_Experience(up);
