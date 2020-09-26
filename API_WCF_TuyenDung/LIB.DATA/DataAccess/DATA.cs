@@ -318,7 +318,7 @@ namespace LIB.DATA.DataAccess
             {
                 var lp = new List<SqlParameter>
                 {
-                    new SqlParameter("@idUser",id)
+                    new SqlParameter("@idcompany",id)
                 };
                 return CONNECT.CONNECT.ExecuteSPList<UPDATE_JOB>("getAllJob", lp);
             }
