@@ -304,7 +304,7 @@ namespace LIB.DATA.DataAccess
                     new SqlParameter("@deadline",model.Deadline),
 
                 };
-                return CONNECT.CONNECT.ExecuteSP<ResponseResult>("insertJob", lp);
+                return CONNECT.CONNECT.ExecuteSP<ResponseResult>("updateJob", lp);
             }
             catch (Exception e)
             {
