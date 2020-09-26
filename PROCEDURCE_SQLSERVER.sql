@@ -195,3 +195,16 @@ begin
 	Node=@node,image=@idcompany where IdCompany=@idcompany
 	select @@ROWCOUNT as ResponseCode
 end
+
+create proc insertJob  @idcompany int,
+						@titlejob nvarchar(100),
+						@jobdescription nvarchar(max),
+						@request nvarchar(max),
+						@benefits nvarchar(max),
+						@deadline varchar(25)
+as
+begin
+	insert into JOBS(IdCompany,TitleJob,JobDescription,Request,Benefits,Deadline)
+	values(@idcompany,@titlejob,@jobdescription,@request,@benefits,@deadline)
+	select @@ROWCOUNT as ResponseCode
+end

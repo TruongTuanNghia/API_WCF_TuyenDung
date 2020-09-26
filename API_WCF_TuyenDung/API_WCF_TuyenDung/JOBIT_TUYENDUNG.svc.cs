@@ -54,6 +54,12 @@ namespace API_WCF_TuyenDung
             return CONVERJS.ReturnResult(l);
         }
 
+        public Stream insertJob(INSERT_JOB_INPUT model)
+        {
+            var l = Services.Insert_Job(model);
+            return CONVERJS.ReturnResult(l);
+        }
+
         public Stream InsertLogGin(LOGIN_INPUT model)
         {
             var isl = Services.Insert_Login(model);

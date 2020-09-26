@@ -22,5 +22,6 @@ namespace LIB.DATA.IDataAccess
         ResponseResult delete_Login(int id);
         ResponseResult insert_Company(INSERT_COMPANY model);
         ResponseResult update_Company(INSERT_COMPANY model);
+        ResponseResult insert_Job(INSERT_JOB model);
     }
 }

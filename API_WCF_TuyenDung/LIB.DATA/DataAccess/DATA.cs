@@ -266,5 +266,29 @@ namespace LIB.DATA.DataAccess
                 throw e;
             }
         }
+
+        public ResponseResult insert_Job(INSERT_JOB model)
+        {
+            try
+            {
+                var lp = new List<SqlParameter>
+                {
+                    new SqlParameter("@idcompany",model.IdCompany),
+                    new SqlParameter("@titlejob",model.TitleJob),
+                    new SqlParameter("@jobdescription",model.JobDescription),
+                    new SqlParameter("@request",model.Request),
+                    new SqlParameter("@benefits",model.Benefits),
+                    new SqlParameter("@deadline",model.Deadline),
+                  
+                };
+                return CONNECT.CONNECT.ExecuteSP<ResponseResult>("insertJob", lp);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+       
     }
 }

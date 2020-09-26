@@ -49,6 +49,7 @@
     <Compile Include="Model\INSERT_CANDIDATE.cs" />
     <Compile Include="Model\INSERT_COMPANY.cs" />
     <Compile Include="Model\INSERT_EXPERIENCES.cs" />
+    <Compile Include="Model\INSERT_JOB.cs" />
     <Compile Include="Model\LOGIN.cs" />
     <Compile Include="Model\ResponseResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

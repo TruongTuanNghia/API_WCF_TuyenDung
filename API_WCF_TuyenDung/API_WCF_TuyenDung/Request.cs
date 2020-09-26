@@ -81,4 +81,13 @@ namespace API_WCF_TuyenDung
         public string Image { get; set; }
         public string Node { get; set; }
     }
+    public class INSERT_JOB_INPUT
+    {
+        public int IdCompany { get; set; }
+        public string TitleJob { get; set; }
+        public string JobDescription { get; set; }
+        public string Request { get; set; }
+        public string Benefits { get; set; }
+        public string Deadline { get; set; }
+    }
 }
