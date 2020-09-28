@@ -8,6 +8,7 @@ namespace LIB.DATA.Model
 {
     public class INSERT_JOB
     {
+        public int IdJob { get; set; }
         public int IdCompany { get; set; }
         public string TitleJob { get; set; }
         public string JobDescription { get; set; }

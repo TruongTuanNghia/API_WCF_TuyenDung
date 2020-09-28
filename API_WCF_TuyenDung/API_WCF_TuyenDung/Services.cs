@@ -208,7 +208,9 @@ namespace API_WCF_TuyenDung
                 Skill = d.Skill,
                 Specialized = d.Specialized,
                 CareerGoal = d.CareerGoal,
-                DateBirth = d.DateBirth              
+                DateBirth = d.DateBirth,
+                Image=d.Image,
+                Interests=d.Interests
             };
             var res = IData.insert_Candidate(dto);
             if (res.ResponseCode == 1)
@@ -238,7 +240,9 @@ namespace API_WCF_TuyenDung
                 Skill = d.Skill,
                 Specialized = d.Specialized,
                 CareerGoal = d.CareerGoal,
-                DateBirth = d.DateBirth
+                DateBirth = d.DateBirth,
+                Image = d.Image,
+                Interests = d.Interests
             };
             var res = IData.update_Candidate(dto);
             if (res.ResponseCode == 1)
@@ -265,7 +269,7 @@ namespace API_WCF_TuyenDung
             {
                 dto = new GET_CANDIDATE_OUT
                 {
-                    userName = res.userName,
+                    userName = res.UserName,
                     FullName = res.FullName,
                     Address = res.Address,
                     School = res.School,
@@ -273,10 +277,13 @@ namespace API_WCF_TuyenDung
                     Email = res.Email,
                     Skill = res.Skill,
                     Specialized = res.Specialized,
-                    CareerGoal = res.CareerGoal,
+                    CareerGoal = res.CareerGoals,
                     DateBirth = res.DateBirth,
+                    Image=res.Image,
+                    Interests=res.Interests,
                     listExperiences = res.Experiences.Select(x => new GET_EXPERIENCE_OUT()
                     {
+                        IdUser=x.IdUser,
                         idExperiencs = x.idExperiences,
                         titleJob=x.Title,
                         nameCompanny=x.NameCompanny,
@@ -319,6 +326,7 @@ namespace API_WCF_TuyenDung
             ResponseModel rs = new ResponseModel();
             var dto = new INSERT_COMPANY
             {
+               
                 IdCompany = d.IdCompany,
                 FullName = d.FullName,
                 Address = d.Address,              
@@ -374,6 +382,7 @@ namespace API_WCF_TuyenDung
             ResponseModel rs = new ResponseModel();
             var dto = new INSERT_JOB
             {
+                IdJob=d.IdJob,
                 IdCompany = d.IdCompany,
                 TitleJob=d.TitleJob,
                 JobDescription=d.JobDescription,

@@ -8,7 +8,8 @@ namespace LIB.DATA.Model
 {
     public class GET_CANDIDATE
     {
-        public int userName { get; set; }
+        public int id { get; set; }
+        public int UserName { get; set; }
         public string FullName { get; set; }
         public string Address { get; set; }
         public string School { get; set; }
@@ -16,7 +17,7 @@ namespace LIB.DATA.Model
         public string Email { get; set; }
         public string Skill { get; set; }
         public string Image { get; set; }
-        public string CareerGoal { get; set; }
+        public string CareerGoals { get; set; }
         public string DateBirth { get; set; }
         public string Specialized { get; set; }
         public string Interests { get; set; }
@@ -24,6 +25,7 @@ namespace LIB.DATA.Model
     }
     public class EXPERIENCES
     {
+        public int IdUser { get; set; }
         public int idExperiences { get; set; }
         public string Title { get; set; }
         public string NameCompanny { get; set; }

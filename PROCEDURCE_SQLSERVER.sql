@@ -60,8 +60,11 @@ create proc InserEXPERIENCES    @idExperiences int,
 							
 as
 begin
-	insert into  EXPERIENCES(idExperiences,IdUser,Title,NameCompanny,StartDay,EndDay, StatusDoingJob, Note)
-	values(@idExperiences,@idUser,@title,@nameCompanny,@startDay,@endDay,@statusDoingJob,@note)
+ if not exists(select 1 from EXPERIENCES where idExperiences=@idExperiences and IdUser=@idUser)
+    begin
+		insert into  EXPERIENCES(idExperiences,IdUser,Title,NameCompanny,StartDay,EndDay, StatusDoingJob, Note)
+		values(@idExperiences,@idUser,@title,@nameCompanny,@startDay,@endDay,@statusDoingJob,@note)
+	end
 	select @@ROWCOUNT as ResponseCode
 end
 
@@ -111,8 +114,11 @@ create proc insert_Candidate @userName varchar(50), --userName la id login
 							@Interests nvarchar(250)
 as
 begin
- insert into CANDIDATES(userName,FullName,Address,School,PhoneNumber,Email,Skill,Image,CareerGoals,DateBirth,Specialized,Interests)
- values(@userName,@FullName,@Address,@School,@PhoneNumber,@Email,@Skill,@Image,@CareerGoal,@DateBirth,@Specialized,@Interests)
+ if not exists(select 1 from CANDIDATES where UserName=@userName)
+ begin
+	 insert into CANDIDATES(userName,FullName,Address,School,PhoneNumber,Email,Skill,Image,CareerGoals,DateBirth,Specialized,Interests)
+	 values(@userName,@FullName,@Address,@School,@PhoneNumber,@Email,@Skill,@Image,@CareerGoal,@DateBirth,@Specialized,@Interests)
+ end
  	select @@ROWCOUNT as ResponseCode
 end
 
@@ -165,19 +171,19 @@ begin try
 	select @ketQua as ResponseCode
 end
 
-create proc insertCompany  @fullname nvarchar(200), 
-							@idcompany int,
-							@address nvarchar(100),
-							@email nvarchar(50),
+create proc insertCompany  @idcompany int,
+							@fullname nvarchar(200), 							
+							@address nvarchar(100),							
 							@phonenumber int,
-							@node nvarchar(max),
-							@image varchar(100)
+							@email nvarchar(50),							
+							@image varchar(100),
+							@node nvarchar(max)
 as
 begin
  if not exists(select 1 from COMPANYS where IdCompany=@idcompany)
  begin
 	insert into COMPANYS(IdCompany,FullName,Address,Email,PhoneNumber,Node,image)
-	values(@idcompany,@fullname,@address,@email,@phonenumber,@node,@idcompany)
+	values(@idcompany,@fullname,@address,@email,@phonenumber,@node,@image)
  end
  select @@ROWCOUNT as ResponseCode
 end  
@@ -196,7 +202,8 @@ begin
 	select @@ROWCOUNT as ResponseCode
 end
 
-create proc insertJob  @idcompany int,
+create proc insertJob  @idJob int,
+						@idcompany int,
 						@titlejob nvarchar(100),
 						@jobdescription nvarchar(max),
 						@request nvarchar(max),
@@ -204,8 +211,8 @@ create proc insertJob  @idcompany int,
 						@deadline varchar(25)
 as
 begin
-	insert into JOBS(IdCompany,TitleJob,JobDescription,Request,Benefits,Deadline)
-	values(@idcompany,@titlejob,@jobdescription,@request,@benefits,@deadline)
+	insert into JOBS(IdJob,IdCompany,TitleJob,JobDescription,Request,Benefits,Deadline)
+	values(@idJob,@idcompany,@titlejob,@jobdescription,@request,@benefits,@deadline)
 	select @@ROWCOUNT as ResponseCode
 end
 
@@ -227,5 +234,6 @@ end
 create proc getAllJob @idcompany int
 as
 begin
- select * from JOBS where IdCompany=11
+ select * from JOBS where IdCompany=@idcompany
 end
+
