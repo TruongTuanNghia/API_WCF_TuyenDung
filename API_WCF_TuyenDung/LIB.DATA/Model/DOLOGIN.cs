@@ -9,7 +9,6 @@ namespace LIB.DATA.Model
     public class DOLOGIN
     {
         public int ResponseCode { get; set; }
-        public int id { get; set; }
-        public int statusLG { get; set; }
+       
     }
 }

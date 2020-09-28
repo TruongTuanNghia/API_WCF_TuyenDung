@@ -9,12 +9,12 @@ namespace LIB.DATA.Model
     public class INSERT_EXPERIENCES
     {
         public int idExperiences { get; set; }
-        public int idUser { get; set; }
-        public string titleJob { get; set; }
-        public string nameComoanny { get; set; }
-        public string starDay { get; set; }
-        public string endDay { get; set; }
-        public bool statusDoingJob { get; set; }
-        public string note { get; set; }
+        public int IdUser { get; set; }
+        public string Title{ get; set; }
+        public string NameCompanny { get; set; }
+        public string StartDay { get; set; }
+        public string EndDay { get; set; }
+        public bool? StatusDoingJob { get; set; }
+        public string Note { get; set; }
     }
 }

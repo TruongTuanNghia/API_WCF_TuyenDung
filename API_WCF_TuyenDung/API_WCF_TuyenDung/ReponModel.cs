@@ -8,7 +8,7 @@ namespace API_WCF_TuyenDung
     public class DoLogin_Out
     {
         public int id { get; set; }
-        public int stype { get; set; }
+        public int statusLG { get; set; }
     }
     public class GET_EXPERIENCE_OUT
     {

@@ -36,7 +36,7 @@ namespace LIB.DATA.DataAccess
             var lp = new List<SqlParameter>
                 {
                     new SqlParameter("@username",username),
-                    new SqlParameter("@pas",password),                  
+                    new SqlParameter("@password",password),                  
                 };
             return CONNECT.CONNECT.ExecuteSP<DOLOGIN>("DoLogin", lp);
         }
@@ -51,7 +51,7 @@ namespace LIB.DATA.DataAccess
                     new SqlParameter("@userPassword",upass),
                     new SqlParameter("@newuserPassword",newupass)
                 };
-                return CONNECT.CONNECT.ExecuteSP<ResponseResult>("update_Login", lp);
+                return CONNECT.CONNECT.ExecuteSP<ResponseResult>("UpdateLogin", lp);
             }
             catch (Exception ex)
             {
@@ -65,15 +65,15 @@ namespace LIB.DATA.DataAccess
                 var lp = new List<SqlParameter>
                 {
                     new SqlParameter("@idExperiences",model.idExperiences),
-                    new SqlParameter("@idUser",model.idUser),
-                    new SqlParameter("@title",model.titleJob),
-                    new SqlParameter("@nameCompanny",model.nameComoanny),
-                    new SqlParameter("@startDay",model.starDay),
-                    new SqlParameter("@endDay",model.endDay),
-                    new SqlParameter("@statusDoingJob",model.statusDoingJob),
-                    new SqlParameter("@note",model.note),
+                    new SqlParameter("@idUser",model.IdUser),
+                    new SqlParameter("@title",model.Title),
+                    new SqlParameter("@nameCompanny",model.NameCompanny),
+                    new SqlParameter("@startDay",model.StartDay),
+                    new SqlParameter("@endDay",model.EndDay),
+                    new SqlParameter("@statusDoingJob",model.StatusDoingJob),
+                    new SqlParameter("@note",model.Note),
                 };
-                return CONNECT.CONNECT.ExecuteSP<ResponseResult>("inser_Experience", lp);
+                return CONNECT.CONNECT.ExecuteSP<ResponseResult>("InserEXPERIENCES", lp);
             }
             catch (Exception e)
             {
@@ -87,13 +87,13 @@ namespace LIB.DATA.DataAccess
                 var lp = new List<SqlParameter>
                 {
                     new SqlParameter("@idExperiences",model.idExperiences),
-                    new SqlParameter("@idUser",model.idUser),
-                    new SqlParameter("@title",model.titleJob),
-                    new SqlParameter("@nameCompanny",model.nameComoanny),
-                    new SqlParameter("@startDay",model.starDay),
-                    new SqlParameter("@endDay",model.endDay),
-                    new SqlParameter("@statusDoingJob",model.statusDoingJob),
-                    new SqlParameter("@note",model.note),
+                    new SqlParameter("@idUser",model.IdUser),
+                    new SqlParameter("@title",model.Title),
+                    new SqlParameter("@nameCompanny",model.NameCompanny),
+                    new SqlParameter("@startDay",model.StartDay),
+                    new SqlParameter("@endDay",model.EndDay),
+                    new SqlParameter("@statusDoingJob",model.StatusDoingJob),
+                    new SqlParameter("@note",model.Note),
                 };
                 return CONNECT.CONNECT.ExecuteSP<ResponseResult>("updateExperiences", lp);
             }

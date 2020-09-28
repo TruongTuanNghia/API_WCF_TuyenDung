@@ -19,13 +19,13 @@ namespace API_WCF_TuyenDung
         public static string Insert_Login(LOGIN_INPUT model)
         {
             ResponseModel rs = new ResponseModel();
-            if (string.IsNullOrEmpty(model.userNam))
+            if (string.IsNullOrEmpty(model.userName))
             {
                 rs.Returncode = ResponseCodeEnum.Failed.GetHashCode();
                 rs.ReturnMessage = "Tên tài khoản không được để trống";
             }
             else
-                if (string.IsNullOrEmpty(model.passWord))
+                if (string.IsNullOrEmpty(model.userPassword))
             {
                 rs.Returncode = ResponseCodeEnum.Failed.GetHashCode();
                 rs.ReturnMessage = "Mật khẩu không được để trống";
@@ -35,8 +35,8 @@ namespace API_WCF_TuyenDung
 
                 var dto = new LOGIN
                 {
-                    userName = model.userNam,
-                    userPassword = model.passWord,
+                    userName = model.userName,
+                    userPassword = model.userPassword,
                     statusLG = model.statusLG,
                     typeLogin=model.typeLogin
 
@@ -63,13 +63,9 @@ namespace API_WCF_TuyenDung
             var res = IData.DoLogin(d.uname, d.upass);
             if (res.ResponseCode != -1)
             {
-                var dto = new DoLogin_Out()
-                {
-                    id = res.id,
-                    stype = res.statusLG,
-                };
+              
                 rs.Returncode = ResponseCodeEnum.Success.GetHashCode();
-                rs.Data = dto;
+                rs.ReturnMessage = "Đăng nhập thành công";
             }
             else
             {
@@ -96,18 +92,19 @@ namespace API_WCF_TuyenDung
             string js = CONVERJS.convert(rs);
             return js;
         }
-        public static string Insert_Experiences(INSERT_EXPERIENCES_INPUT d)
+        public static string Insert_Experiences(INSERT_EXPERIENCES_INPUT up)
         {
             ResponseModel rs = new ResponseModel();
             var dto = new INSERT_EXPERIENCES
             {
-                idUser = d.idUser,
-                titleJob = d.titleJob,
-                nameComoanny = d.nameCompanny,
-                starDay = d.startDay,
-                endDay = d.endDay,
-                statusDoingJob = d.statusDoingJob,
-                note = d.note
+                idExperiences=up.idExperiences,
+                IdUser = up.IdUser,
+                Title = up.Title,
+                StartDay = up.StartDay,
+                EndDay = up.EndDay,
+                NameCompanny = up.NameCompanny,
+                StatusDoingJob = up.StatusDoingJob,
+                Note = up.Note
             };
             var res = IData.Insert_Experiences(dto);
             if (res.ResponseCode == 1)
@@ -130,13 +127,13 @@ namespace API_WCF_TuyenDung
             var dto = new INSERT_EXPERIENCES
             {
                 idExperiences=up.idExperiences,
-                idUser=up.idUser,
-                titleJob=up.titleJob,
-                starDay=up.startDay,
-                endDay=up.endDay,
-                nameComoanny=up.nameCompanny,
-                statusDoingJob=up.statusDoingJob,
-                note=up.note
+                IdUser=up.IdUser,
+                Title=up.Title,
+                StartDay=up.StartDay,
+                EndDay=up.EndDay,
+                NameCompanny=up.NameCompanny,
+                StatusDoingJob=up.StatusDoingJob,
+                Note=up.Note
             };
             var res = IData.update_Experiences(dto);
             if (res.ResponseCode == 1)
