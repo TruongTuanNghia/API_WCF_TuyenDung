@@ -12,6 +12,7 @@ namespace API_WCF_TuyenDung
     }
     public class GET_EXPERIENCE_OUT
     {
+        public int IdUser { get; set; }
         public int idExperiencs { get; set; }
         public string titleJob { get; set; }
         public string nameCompanny { get; set; }
@@ -26,6 +27,7 @@ namespace API_WCF_TuyenDung
     }
     public class GET_CANDIDATE_OUT
     {
+
         public int userName { get; set; }
         public string FullName { get; set; }
         public string Address { get; set; }

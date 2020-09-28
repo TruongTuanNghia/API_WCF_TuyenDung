@@ -73,6 +73,7 @@ namespace API_WCF_TuyenDung
     }
     public class INSERT_COMPANY_INPUT
     {
+       
         public int IdCompany { get; set; }
         public string FullName { get; set; }
         public string Address { get; set; }
@@ -83,6 +84,7 @@ namespace API_WCF_TuyenDung
     }
     public class INSERT_JOB_INPUT
     {
+        public int IdJob { get; set; }
         public int IdCompany { get; set; }
         public string TitleJob { get; set; }
         public string JobDescription { get; set; }

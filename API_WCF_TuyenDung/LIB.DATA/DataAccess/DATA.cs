@@ -231,9 +231,9 @@ namespace LIB.DATA.DataAccess
                 var lp = new List<SqlParameter>
                 {
                     new SqlParameter("@idcompany",model.IdCompany),
-                    new SqlParameter("@fullName",model.FullName),
+                    new SqlParameter("@fullname",model.FullName),
                     new SqlParameter("@address",model.Address),                  
-                    new SqlParameter("@phoneNumber",model.PhoneNumber),
+                    new SqlParameter("@phonenumber",model.PhoneNumber),
                     new SqlParameter("@email",model.Email),                   
                     new SqlParameter("@image",model.Image),
                     new SqlParameter("@node",model.Node),                   
@@ -252,9 +252,9 @@ namespace LIB.DATA.DataAccess
                 var lp = new List<SqlParameter>
                 {
                     new SqlParameter("@idcompany",model.IdCompany),
-                    new SqlParameter("@fullName",model.FullName),
+                    new SqlParameter("@fullname",model.FullName),
                     new SqlParameter("@address",model.Address),
-                    new SqlParameter("@phoneNumber",model.PhoneNumber),
+                    new SqlParameter("@phonenumber",model.PhoneNumber),
                     new SqlParameter("@email",model.Email),
                     new SqlParameter("@image",model.Image),
                     new SqlParameter("@node",model.Node),
@@ -273,6 +273,7 @@ namespace LIB.DATA.DataAccess
             {
                 var lp = new List<SqlParameter>
                 {
+                    new SqlParameter("@idJob",model.IdJob),
                     new SqlParameter("@idcompany",model.IdCompany),
                     new SqlParameter("@titlejob",model.TitleJob),
                     new SqlParameter("@jobdescription",model.JobDescription),
